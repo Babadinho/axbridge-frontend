@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className='navbar__main'>
           <div className='navbar__container'>
             <Link href={'/'} className='navbar__logo'>
-              <img src='/logo.png' alt='logo' />
+              <img src='/Logo.png' alt='logo' />
             </Link>
             <div className='navbar__menu'>
               <Link href='#'>about us</Link>
