@@ -1,0 +1,117 @@
+@media (max-width: 1310px) {
+    .navbar {
+        &__topBarContainer, &__container {
+            width: 90vw;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        &__topBarContainer {
+            @include display-flex(space-between);
+            width: 100%;
+        }
+
+        &__main {
+            height: 60px
+        }
+
+        &__mainMobile {
+            @include display-flex(space-between)
+        }
+
+        &__container {
+            width: 95vw;
+            @include display-flex(space-between);
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__hamburger {
+            display: block;
+        }
+
+        &__topBarRight {
+            @include display-flex(flex-end);
+        }
+
+        &__socials {
+            display: none;
+        }
+
+        &__mainSocials {
+            display: flex !important;
+            gap: 0.3rem !important;
+    
+            & a {
+                color: $color-title;
+                font-size: 1.1rem !important;
+                transition: color .3s ease-in;
+                padding-top: 0.45rem;
+    
+                &:hover {
+                    color: $color-dark;
+                }
+            }
+        }
+
+        &__topBarLocation {
+            @include display-flex(center);
+            font-size: 0.9rem;
+        }
+
+        &__icon {
+            font-size: 1.3rem !important;
+        }
+
+        &__button {
+            height: 40px;
+
+            & a {
+                padding: 0.8rem;
+                font-weight: 400;
+                font-size: 0.75rem;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+
+        &__topBarLocation {
+            margin: auto;
+            overflow-x: hidden;
+            font-size: 0.85rem;
+        }
+
+        &__address {
+            animation-name: rightToLeft;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            white-space: nowrap;
+          }
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        &__address {
+            animation-name: rightToLeftSmaller;
+          }
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar {
+        &__address {
+            animation-name: rightToLeftSmallest;
+          }
+    }
+}

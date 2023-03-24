@@ -1,0 +1,236 @@
+.navbar {
+    height: auto;
+    @include display-flex(center);
+    width: 100%;
+
+    &__wrapper {
+        @include display-flex(center);
+        flex-direction: column;
+    }
+
+    // navbar topbar start design
+    &__topBar {
+        background-color: $color-dark;
+        color: $color-white;
+        font-size: 0.9rem;
+        font-weight: 300;
+        @include display-flex(center);
+        width: 100vw;
+        height: 35px;
+    }
+
+    &__topBarContainer {
+        @include display-flex(space-between);
+        width: 1210px;
+    }
+
+    &__address {
+        @include display-flex(center);
+        gap: 0.2rem;
+    }
+
+    &__icon {
+        color: $color-yellow-dark;
+        font-size: 1.1rem;
+        transition: color .3s ease-in;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &__topBarRight {
+        @include display-flex(center);
+        gap: 2rem;
+    }
+
+    &__button {
+        @include display-flex(center);
+        background-color: $color-yellow-darker;
+        transition: background-color .3s ease-in;
+        height: 40px;
+
+        &:hover {
+            background-color: $color-yellow-dark;
+        }
+        
+        & a {
+            padding: 1rem 1rem;
+            text-decoration: none;
+            color: $color-white;
+            font-weight: 400;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__socials {
+        @include display-flex(center);
+        gap: 0.5rem;
+
+        & a {
+            color: $color-white;
+            transition: color .3s ease-in;
+
+            &:hover {
+                color: $color-yellow-dark;
+            }
+        }
+    }
+
+// navbar main start design
+    &__main {
+        @include display-flex(center);
+        background-color: $color-white;
+        color: $color-dark;
+        font-size: 0.9rem;
+        font-weight: 400;
+        width: 100vw;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        height: 65px
+    }
+
+    &__container {
+        @include display-flex(space-between);
+        width: 1200px;
+    }
+
+    &__logo {
+        @include display-flex(center);
+        height: 40px;
+        width: 140px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__mainSocials {
+        display: none !important;
+    }
+
+    &__menu {
+        @include display-flex(center);
+        gap: 1.3rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        & a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $color-dark;
+            transition: color .6s ease-in;
+            position: relative;
+
+            &:hover {
+                color: $color-yellow-darker;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background: $color-yellow-darker;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition: 0.4s;
+            }
+
+        }
+
+        & span {
+            color: $color-yellow-dark;
+        }
+    }
+
+    &__mainMobile {
+        @include display-flex(center);
+        gap: 1rem;
+        display: none;
+    }
+
+    &__hamburger {
+        display: none;
+
+        &--line{
+            width: 28px;
+            height: 3px;
+            background-color: $color-yellow-darker;
+            display: block;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &--active &--line:nth-child(2){
+            opacity: 0;
+        }
+
+        &--active &--line:nth-child(1){
+            -webkit-transform: translateY(8px) rotate(45deg);
+            -ms-transform: translateY(8px) rotate(45deg);
+            -o-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        &--active &--line:nth-child(3){
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            -ms-transform: translateY(-8px) rotate(-45deg);
+            -o-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    &__hamburgerMenu {
+        @include display-flex(center);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+        position: absolute;
+        right: 0;
+        top: 96px;
+        height: 0;
+        width: 260px;
+        background: $color-white;
+        overflow: hidden;
+        transition: height .5s;
+
+        &--active {
+            padding: 15px 0;
+            height: 300px;
+            padding-bottom: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $color-title;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding-left: 2rem;
+            font-size: 0.95rem;
+
+            &:hover {
+                color: $color-yellow-darker;
+            }
+        }
+    }
+
+    &__dividerMobile {
+        height: 1px;
+        background-color: $color-yellow-darker;
+        margin-left: 2rem;
+        width: 198px;
+    }
+}
