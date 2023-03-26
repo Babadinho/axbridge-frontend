@@ -123,11 +123,17 @@ const Navbar = () => {
                       activeSubMenu && 'navbar__mobileSubMenu--active'
                     }`}
                   >
-                    <Link href='#'>family law</Link>
+                    <Link href='#'>
+                      <span>-</span>family law
+                    </Link>
                     <span></span>
-                    <Link href='#'>criminal law</Link>
+                    <Link href='#'>
+                      <span>-</span>criminal law
+                    </Link>
                     <span></span>
-                    <Link href='#'>civil law</Link>
+                    <Link href='#'>
+                      <span>-</span>civil law
+                    </Link>
                     <span></span>
                   </span>
                 </span>

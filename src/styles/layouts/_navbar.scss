@@ -321,6 +321,10 @@
         & a {
             font-weight: 500;
         }
+
+        & span {
+            color: $color-yellow-darker;
+        }
     }
 
     &__dividerMobile {
