@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { MdLocationOn } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 const Navbar = () => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
+  const [activeSubMenu, setActiveSubmenu] = useState(false);
+
   return (
     <div className='navbar'>
       <div className='navbar__wrapper'>
@@ -37,14 +40,34 @@ const Navbar = () => {
         <div className='navbar__main'>
           <div className='navbar__container'>
             <Link href={'/'} className='navbar__logo'>
-              <img src='/Logo.png' alt='logo' />
+              <img src='/images/Logo.png' alt='logo' />
             </Link>
             <div className='navbar__menu'>
               <Link href='#'>about us</Link>
               <span>|</span>
-              <Link href='#'>Articles</Link>
+              <Link href='#'>articles</Link>
               <span>|</span>
-              <Link href='#'>practice areas</Link>
+              <span
+                className='navbar__menuItem'
+                onMouseOver={() => setActiveSubmenu(true)}
+                onMouseLeave={() => setActiveSubmenu(false)}
+              >
+                <Link href='#'>
+                  practice areas <IoMdArrowDropdown className='navbar__arrow' />
+                </Link>
+                <span
+                  className={`navbar__submenu ${
+                    activeSubMenu && 'navbar__submenu--active'
+                  }`}
+                >
+                  <Link href='#'>family law</Link>
+                  <span></span>
+                  <Link href='#'>criminal law</Link>
+                  <span></span>
+                  <Link href='#'>civil law</Link>
+                  <span></span>
+                </span>
+              </span>
               <span>|</span>
               <Link href='#'>awards</Link>
               <span>|</span>
@@ -83,7 +106,27 @@ const Navbar = () => {
                 <span className='navbar__dividerMobile'></span>
                 <Link href='#'>Articles</Link>
                 <span className='navbar__dividerMobile'></span>
-                <Link href='#'>practice areas</Link>
+                <span
+                  className='navbar__mobileMenuItem'
+                  onClick={() => setActiveSubmenu(!activeSubMenu)}
+                >
+                  <Link href='#'>
+                    practice areas{' '}
+                    <IoMdArrowDropdown className='navbar__arrow' />
+                  </Link>
+                  <span
+                    className={`navbar__mobileSubMenu ${
+                      activeSubMenu && 'navbar__mobileSubMenu--active'
+                    }`}
+                  >
+                    <Link href='#'>family law</Link>
+                    <span></span>
+                    <Link href='#'>criminal law</Link>
+                    <span></span>
+                    <Link href='#'>civil law</Link>
+                    <span></span>
+                  </span>
+                </span>
                 <span className='navbar__dividerMobile'></span>
                 <Link href='#'>awards</Link>
                 <span className='navbar__dividerMobile'></span>

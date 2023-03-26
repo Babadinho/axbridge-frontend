@@ -115,13 +115,17 @@
         gap: 1.3rem;
         font-size: 0.95rem;
         font-weight: 500;
+        height: 65px;
 
         & a {
+            @include display-flex(center);
+            gap: 0.3rem;
             text-decoration: none;
             text-transform: capitalize;
             color: $color-dark;
-            transition: color .6s ease-in;
+            transition: color .3s ease-in;
             position: relative;
+            height: 100%;
 
             &:hover {
                 color: $color-yellow-darker;
@@ -138,7 +142,7 @@
                 background: $color-yellow-darker;
                 position: absolute;
                 left: 0;
-                bottom: -5px;
+                bottom: 17px;
                 transition: 0.4s;
             }
 
@@ -146,6 +150,59 @@
 
         & span {
             color: $color-yellow-dark;
+        }
+    }
+
+    &__menuItem {
+        position: relative;
+        height: 66px;
+    }
+
+    &__arrow {
+        transition: all 0.4s ease;
+    }
+
+    &__menuItem:hover &__arrow {
+        transform: rotate(180deg);
+    }
+
+    &__submenu {
+        @include display-flex(flex-start);
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.6rem;
+        background-color: $color-white;
+        height: auto;
+        width: 163px;
+        position: absolute;
+        top: 4.2rem;
+        left: -1.2rem;
+        max-height: 0;
+        overflow: hidden;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        transition: max-height 0.2s ease-out;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        &--active {
+            padding-top: 1.3rem;
+            padding-bottom: 2.4rem;
+            max-height: 180px;
+            transition: max-height 0.2s ease-in;
+        }
+
+        & a {
+            &:hover {
+                &::after {
+                    width: 0;
+                }
+            }
+        }
+
+        & span {
+            height: 1px;
+            width: 100%;
+            background-color: $color-yellow-darker;
         }
     }
 
@@ -200,16 +257,16 @@
         position: absolute;
         right: 0;
         top: 96px;
-        height: 0;
+        max-height: 0;
         width: 260px;
         background: $color-white;
         overflow: hidden;
-        transition: height .5s;
+        transition: max-height 0.4s ease-out;
 
         &--active {
-            padding: 15px 0;
-            height: 300px;
-            padding-bottom: 2rem;
+            padding: 1.5rem 0 2rem 0;
+            max-height: 1000px;
+            transition: max-height 0.4s ease-in;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         }
 
@@ -224,6 +281,42 @@
             &:hover {
                 color: $color-yellow-darker;
             }
+        }
+    }
+
+    &__mobileMenuItem {
+        @include display-flex(center);
+        flex-direction: column;
+        align-items: flex-start;
+
+        & a {
+            @include display-flex(center);
+            gap: 0.1rem;
+        }
+    }
+
+    &__mobileMenuItem:hover &__arrow {
+        transform: rotate(180deg);
+    }
+
+    &__mobileSubMenu {
+        @include display-flex(center);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding-left: 1rem;
+
+        &--active {
+            max-height: 360px;
+            transition: max-height 0.3s ease-in;
+            padding-top: 0.3rem;
+        }
+
+        & a {
+            font-weight: 500;
         }
     }
 
