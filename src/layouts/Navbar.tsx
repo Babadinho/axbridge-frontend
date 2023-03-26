@@ -106,11 +106,11 @@ const Navbar = () => {
                 <span className='navbar__dividerMobile'></span>
                 <Link href='#'>Articles</Link>
                 <span className='navbar__dividerMobile'></span>
-                <span
-                  className='navbar__mobileMenuItem'
-                  onClick={() => setActiveSubmenu(!activeSubMenu)}
-                >
-                  <Link href='#'>
+                <span className='navbar__mobileMenuItem'>
+                  <Link
+                    href='#'
+                    onClick={() => setActiveSubmenu(!activeSubMenu)}
+                  >
                     practice areas{' '}
                     <IoMdArrowDropdown
                       className={`navbar__arrowMobile ${
