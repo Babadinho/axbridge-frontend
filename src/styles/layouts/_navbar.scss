@@ -172,7 +172,6 @@
         flex-direction: column;
         gap: 0.6rem;
         background-color: $color-white;
-        height: auto;
         width: 163px;
         position: absolute;
         top: 4.2rem;
@@ -181,14 +180,14 @@
         overflow: hidden;
         padding-right: 1rem;
         padding-left: 1rem;
-        transition: max-height 0.2s ease-out;
+        transition: all 0.3s ease-out;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
         &--active {
             padding-top: 1.3rem;
             padding-bottom: 2.4rem;
             max-height: 180px;
-            transition: max-height 0.2s ease-in;
+            transition: all 0.3s ease-in;
         }
 
         & a {
@@ -261,12 +260,12 @@
         width: 260px;
         background: $color-white;
         overflow: hidden;
-        transition: max-height 0.4s ease-out;
+        transition: all 0.2s ease-out;
 
         &--active {
             padding: 1.5rem 0 2rem 0;
-            max-height: 1000px;
-            transition: max-height 0.4s ease-in;
+            max-height: 360px;
+            transition: all 0.3s ease-in;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         }
 
@@ -295,8 +294,12 @@
         }
     }
 
-    &__mobileMenuItem:hover &__arrow {
-        transform: rotate(180deg);
+    &__arrowMobile {
+        transition: all 0.4s ease;
+
+        &--active {
+            transform: rotate(180deg) !important;
+        }
     }
 
     &__mobileSubMenu {
@@ -306,11 +309,11 @@
         gap: 0.2rem;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-out;
+        transition: max-height 0.2s ease-out;
         padding-left: 1rem;
 
         &--active {
-            max-height: 360px;
+            max-height: 120px;
             transition: max-height 0.3s ease-in;
             padding-top: 0.3rem;
         }

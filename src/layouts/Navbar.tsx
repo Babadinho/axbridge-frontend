@@ -112,7 +112,11 @@ const Navbar = () => {
                 >
                   <Link href='#'>
                     practice areas{' '}
-                    <IoMdArrowDropdown className='navbar__arrow' />
+                    <IoMdArrowDropdown
+                      className={`navbar__arrowMobile ${
+                        activeSubMenu && 'navbar__arrowMobile--active'
+                      }`}
+                    />
                   </Link>
                   <span
                     className={`navbar__mobileSubMenu ${
