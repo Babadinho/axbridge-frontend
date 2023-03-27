@@ -1,4 +1,4 @@
-import Navbar from '@/layouts/Navbar';
+import Header from '@/layouts/Header';
 import Head from 'next/head';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div></div>
+        <Header />
       </main>
     </>
   );

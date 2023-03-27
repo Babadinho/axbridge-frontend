@@ -6,6 +6,7 @@
     &__wrapper {
         @include display-flex(center);
         flex-direction: column;
+        z-index: 30;
     }
 
     // navbar topbar start design
@@ -21,7 +22,7 @@
 
     &__topBarContainer {
         @include display-flex(space-between);
-        width: 1210px;
+        width: 1150px;
     }
 
     &__address {
@@ -92,7 +93,7 @@
 
     &__container {
         @include display-flex(space-between);
-        width: 1200px;
+        width: 1150px;
     }
 
     &__logo {
@@ -112,7 +113,7 @@
 
     &__menu {
         @include display-flex(center);
-        gap: 1.3rem;
+        gap: 1.1rem;
         font-size: 0.95rem;
         font-weight: 500;
         height: 65px;
@@ -172,10 +173,10 @@
         flex-direction: column;
         gap: 0.6rem;
         background-color: $color-white;
-        width: 163px;
+        width: 161px;
         position: absolute;
         top: 4.2rem;
-        left: -1.2rem;
+        left: -1.1rem;
         max-height: 0;
         overflow: hidden;
         padding-right: 1rem;
@@ -188,6 +189,7 @@
             padding-bottom: 2.4rem;
             max-height: 180px;
             transition: all 0.3s ease-in;
+            z-index: 10;
         }
 
         & a {
@@ -272,6 +274,7 @@
             max-height: 360px;
             transition: all 0.3s ease-in;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            z-index: 30;
         }
 
         & a {

@@ -1,7 +1,45 @@
 @media (max-width: 1310px) {
     .navbar {
-        &__topBarContainer, &__container {
-            width: 90vw;
+        &__container {
+            width: 97vw;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .header {
+        &__carouselItemTitle {
+            font-size: 3rem;
+        }
+        
+        &__carouselItemSubtitle {
+            font-size: 1.7rem;
+        }
+
+        &__carouselItemDescription {
+            font-size: 1rem;
+            max-width: 550px;
+        }
+
+        &__arrows {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__carouselItemTitle {
+            font-size: 2.7rem;
+        }
+        
+        &__carouselItemSubtitle {
+            font-size: 1.4rem;
+        }
+
+        &__carouselItemDescription {
+            font-size: 0.85rem;
+            max-width: 450px;
         }
     }
 }
@@ -94,7 +132,22 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             white-space: nowrap;
-          }
+        }
+    }
+
+    .header {
+        &__carouselItemTitle {
+            font-size: 2.1rem;
+        }
+        
+        &__carouselItemSubtitle {
+            font-size: 1.2rem;
+        }
+
+        &__carouselItemDescription {
+            font-size: 0.85rem;
+            max-width: 370px;
+        }
     }
 }
 
@@ -103,6 +156,28 @@
         &__address {
             animation-name: rightToLeftSmaller;
           }
+    }
+
+    .header {
+        &__carouselItemContent {
+            gap: 0.5rem;
+        }
+
+        &__carouselItemTitle {
+            font-size: 1.8rem;
+            margin-bottom: unset;
+        }
+        
+        &__carouselItemSubtitle {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        &__carouselItemDescription {
+            font-size: 0.75rem;
+            max-width: 300px;
+            margin-bottom: 0.7rem;
+        }
     }
 }
 
