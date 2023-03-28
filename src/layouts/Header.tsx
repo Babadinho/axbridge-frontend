@@ -106,8 +106,8 @@ const Header = () => {
   ];
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => handleSlideLeft(),
-    onSwipedRight: () => handleSlideRight(),
+    onSwipedLeft: () => handleSlideRight(),
+    onSwipedRight: () => handleSlideLeft(),
     swipeDuration: 500,
     preventScrollOnSwipe: true,
     trackMouse: true,
