@@ -68,6 +68,7 @@
     &__socials {
         @include display-flex(center);
         gap: 0.5rem;
+        padding-top: 0.3rem;
 
         & a {
             color: $color-white;

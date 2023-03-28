@@ -1,6 +1,6 @@
 @media (max-width: 1310px) {
     .navbar {
-        &__container {
+        &__container, &__topBarContainer {
             width: 97vw;
         }
     }
@@ -40,6 +40,11 @@
         &__carouselItemDescription {
             font-size: 0.85rem;
             max-width: 450px;
+        }
+    }
+    .about {
+        &__summary {
+            max-width: 550px;
         }
     }
 }
@@ -119,7 +124,6 @@
 
 @media (max-width: 576px) {
     .navbar {
-
         &__topBarLocation {
             margin: auto;
             overflow-x: hidden;
@@ -136,6 +140,8 @@
     }
 
     .header {
+        margin-bottom: 5rem;
+
         &__carouselItemTitle {
             font-size: 2.1rem;
         }
@@ -147,6 +153,27 @@
         &__carouselItemDescription {
             font-size: 0.85rem;
             max-width: 370px;
+        }
+    }
+
+    .about {
+        &__heading {
+            font-size: 1.8rem;
+        }
+    
+        &__line {
+            width: 65px;
+        }
+    
+        &__icon {
+            font-size: 2.3rem;
+            height: 55px;
+            width: 55px;
+        }
+
+        &__summary {
+            max-width: 400px;
+            font-size: 0.95rem;
         }
     }
 }
@@ -177,6 +204,27 @@
             font-size: 0.8rem;
             max-width: 320px;
             margin-bottom: 0.7rem;
+        }
+    }
+
+    .about {
+        &__heading {
+            font-size: 1.6rem;
+        }
+    
+        &__line {
+            width: 60px;
+        }
+    
+        &__icon {
+            font-size: 2.1rem;
+            height: 52px;
+            width: 52px;
+        }
+
+        &__summary {
+            max-width: 350px;
+            font-size: 0.9rem;
         }
     }
 }

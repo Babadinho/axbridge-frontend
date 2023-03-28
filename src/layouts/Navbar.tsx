@@ -22,18 +22,18 @@ const Navbar = () => {
             <div className='navbar__topBarRight'>
               <div className='navbar__socials'>
                 <Link href='#'>
-                  <ImTwitter size={15} />
+                  <ImTwitter size={17} />
                 </Link>
                 <Link href='#'>
-                  <ImFacebook size={15} />
+                  <ImFacebook size={17} />
                 </Link>
                 <Link href='#'>
-                  <ImInstagram size={14} />
+                  <ImInstagram size={17} />
                 </Link>
               </div>
-              <div className='navbar__button'>
+              {/* <div className='navbar__button'>
                 <Link href='#'>consult for free</Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

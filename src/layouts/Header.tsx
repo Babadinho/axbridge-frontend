@@ -154,6 +154,7 @@ const Header = () => {
   return (
     <section className='header'>
       <div className='header__carousel' {...handlers}>
+        <div className='header__overlay'></div>
         {carouselContent.map((slide) => (
           <div
             key={slide.id}
