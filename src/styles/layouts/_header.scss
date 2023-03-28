@@ -12,13 +12,6 @@
         height: 100%;
     }
 
-    &__carouselItemImage {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        object-fit: cover;
-    }
-
     &__arrows {
         @include display-flex(space-between);
         opacity: 0;
@@ -76,15 +69,19 @@
 
         &--active {
             display: inline-block;
-            
-            & img {
-                animation: fadeIn 1s ease-in-out;
-            }
         }
     
         &--inactive {
             display: none;
         }
+    }
+
+    &__carouselItemImage {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        animation: fadeIn 1s ease-in-out;
     }
 
     &__carouselItemContent {
