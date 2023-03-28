@@ -1,6 +1,5 @@
 .about {
     @include display-flex(center);
-    width: 100%;
 
     &__header {
         @include display-flex(center);
