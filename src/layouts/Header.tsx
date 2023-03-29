@@ -12,7 +12,7 @@ const Header = () => {
   const carouselContent: Carousel = [
     {
       id: 1,
-      title: 'the voice of justice',
+      title: `the voice of justice`,
       subtitle: '24 hours legal services',
       description:
         "When you go into court you are putting your fate into the hands of twelve people who weren't smart enough to get out of jury duty.",
