@@ -1,10 +1,15 @@
 .about {
     @include display-flex(center);
+    flex-direction: column;
+    margin: auto;
+    gap: 3rem;
+    margin-bottom: 5rem;
 
     &__header {
         @include display-flex(center);
         flex-direction: column;
         gap: 1.4rem;
+        max-width: 1150px;
     }
 
     &__heading {
@@ -48,5 +53,76 @@
         max-width: 700px;
         text-align: center;
         font-size: 1rem;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        color: $color-title;
+        gap: 1.5rem;
+        width: 1150px;
+    }
+
+    &__imageContainer {
+        height: 380px;
+        width: 555px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__imageUnderlay {
+        position: absolute;
+        background-color: $color-yellow-dark;
+        height: 100%;
+        width: 100%;
+        right: 0.7rem;
+        top: 0.9rem
+    }
+
+    &__content {
+        @include display-flex(flex-start); 
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.1rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+    }
+
+    &__description {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    &__list {
+        @include display-flex(flex-start); 
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem
+    }
+
+    &__listItem {
+        @include display-flex(center); 
+        align-items: center;
+        gap: 0.4em;
+        // font-weight: 500;
+    }
+
+    &__check {
+        color: $color-yellow-darker;
+    }
+
+    &__button {
+        @include button;
+        margin-top: 1.2rem;
     }
 }
