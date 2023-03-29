@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { MdLocationOn } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
-import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { FaTiktok } from 'react-icons/fa';
 
 const Navbar = () => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
@@ -15,7 +16,9 @@ const Navbar = () => {
           <div className='navbar__topBarContainer'>
             <div className='navbar__topBarLocation'>
               <span className='navbar__address'>
-                <MdLocationOn className='navbar__icon' />
+                <span>
+                  <MdLocationOn className='navbar__icon' size={18} />
+                </span>
                 Plot 596 Independence Avenue, Central Business District, Abuja
               </span>
             </div>
@@ -29,6 +32,9 @@ const Navbar = () => {
                 </Link>
                 <Link href='#'>
                   <ImInstagram size={17} />
+                </Link>
+                <Link href='#'>
+                  <FaTiktok size={17} />
                 </Link>
               </div>
               {/* <div className='navbar__button'>
@@ -74,18 +80,6 @@ const Navbar = () => {
               <Link href='#'>contact</Link>
             </div>
             <div className='navbar__mainMobile'>
-              <div className='navbar__mainSocials'>
-                <Link href='#'>
-                  <ImTwitter />
-                </Link>
-                <Link href='#'>
-                  <ImFacebook />
-                </Link>
-                <Link href='#'>
-                  <ImInstagram />
-                </Link>
-              </div>
-
               <div
                 className={`navbar__hamburger ${
                   activeMobileMenu && 'navbar__hamburger--active'

@@ -164,11 +164,6 @@ const Header = () => {
                 : 'header__carouselItem--inactive'
             }`}
           >
-            <img
-              src={slide.image}
-              alt='header-carousel-image'
-              className='header__carouselItemImage'
-            />
             <motion.div
               variants={container}
               initial='hidden'
@@ -176,6 +171,12 @@ const Header = () => {
               exit='exit'
               key={activeIndex}
             >
+              <img
+                src={slide.image}
+                alt='header-carousel-image'
+                className='header__carouselItemImage'
+              />
+
               <div className='header__carouselItemContent'>
                 <motion.div variants={slide.animation}>
                   <h2 className='header__carouselItemTitle'>{slide.title}</h2>
