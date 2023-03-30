@@ -12,42 +12,15 @@ const Header = () => {
   const carouselContent: Carousel = [
     {
       id: 1,
-      title: `the voice of justice`,
+      title: (
+        <span>
+          the <strong>voice</strong> of <strong>justice</strong>
+        </span>
+      ),
       subtitle: '24 hours legal services',
       description:
         "When you go into court you are putting your fate into the hands of twelve people who weren't smart enough to get out of jury duty.",
       image: '/images/Slide1.jpg',
-      button: 'Read More',
-      animation: {
-        hidden: {
-          opacity: 0,
-          y: 10,
-        },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            ease: [0.2, 0.05, 0.05, 0.01],
-            duration: 1,
-          },
-        },
-        exit: {
-          opacity: 0,
-          y: -50,
-          transition: {
-            ease: 'easeInOut',
-            duration: 0.8,
-          },
-        },
-      },
-    },
-    {
-      id: 2,
-      title: 'the voice of justice',
-      subtitle: '24 hours legal services',
-      description:
-        "When you go into court you are putting your fate into the hands of twelve people who weren't smart enough to get out of jury duty.",
-      image: '/images/Slide2.jpg',
       button: 'Read More',
       animation: {
         hidden: {
@@ -73,8 +46,47 @@ const Header = () => {
       },
     },
     {
+      id: 2,
+      title: (
+        <span>
+          the <strong>voice</strong> of <strong>justice</strong>
+        </span>
+      ),
+      subtitle: '24 hours legal services',
+      description:
+        "When you go into court you are putting your fate into the hands of twelve people who weren't smart enough to get out of jury duty.",
+      image: '/images/Slide2.jpg',
+      button: 'Read More',
+      animation: {
+        hidden: {
+          opacity: 0,
+          y: 10,
+        },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: [0.2, 0.05, 0.05, 0.01],
+            duration: 1,
+          },
+        },
+        exit: {
+          opacity: 0,
+          y: -50,
+          transition: {
+            ease: 'easeInOut',
+            duration: 0.8,
+          },
+        },
+      },
+    },
+    {
       id: 3,
-      title: 'the voice of justice',
+      title: (
+        <span>
+          the <strong>voice</strong> of <strong>justice</strong>
+        </span>
+      ),
       subtitle: '24 hours legal services',
       description:
         "When you go into court you are putting your fate into the hands of twelve people who weren't smart enough to get out of jury duty.",

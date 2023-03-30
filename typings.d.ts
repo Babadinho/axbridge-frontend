@@ -2,7 +2,7 @@ import { Variants } from 'framer-motion';
 
 export interface CarouselItem {
   id: number;
-  title: string;
+  title: ReactElement;
   subtitle: string;
   description: string;
   image: string;

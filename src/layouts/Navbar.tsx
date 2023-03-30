@@ -71,7 +71,6 @@ const Navbar = () => {
                   <Link href='#'>criminal law</Link>
                   <span></span>
                   <Link href='#'>civil law</Link>
-                  <span></span>
                 </span>
               </span>
               <span>|</span>

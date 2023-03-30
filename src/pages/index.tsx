@@ -1,5 +1,6 @@
 import About from '@/layouts/About';
 import Header from '@/layouts/Header';
+import Practice from '@/layouts/Practice';
 import Head from 'next/head';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Header />
         <About />
+        <Practice />
       </main>
     </>
   );
