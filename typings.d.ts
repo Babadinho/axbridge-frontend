@@ -11,3 +11,8 @@ export interface CarouselItem {
 }
 
 export interface Carousel extends Array<CarouselItem> {}
+
+export interface SliderProps {
+  slide: CarouselItem;
+  activeIndex: number;
+}
