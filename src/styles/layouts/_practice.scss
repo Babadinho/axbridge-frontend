@@ -78,9 +78,20 @@
         &:hover .practice__cardOverlay {
             height: 100%;
             transition: all ease-in .5s;
-            background-color: $color-dark;
-            opacity: 0.94;
+            background-color: rgba(30, 30, 30, 0.882);
             padding-top: 2.3rem;
+            
+        }
+
+        &:hover .practice__bodyHeader {
+            &::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                top: 2.5rem;
+                background-color: $color-yellow-darker;
+            }
         }
     }
 
@@ -99,9 +110,8 @@
         flex-direction: column;
         position: absolute;
         bottom: 0;
-        background-color: $color-yellow-darker;
+        background-color: rgba(187, 143, 24, 0.966);
         padding: 1.4rem;
-        opacity: 0.97;
         height: 27%;
         overflow: hidden;
         transition: all ease-out .5s;
@@ -113,15 +123,6 @@
         margin-bottom: 1rem;
         color: $color-white;
         position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            top: 2.5rem;
-            background-color: $color-yellow-darker;
-        }
     }
 
     &__bodyIcon {
@@ -131,6 +132,7 @@
     &__title {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+        font-weight: 500;
     }
 
     &__description {
