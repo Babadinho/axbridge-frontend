@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import { useSwipeable } from 'react-swipeable';
 import Slider from '@/components/Slider';
-import { sliderContent } from '@/data/sliderContent';
+import { sliderData } from '@/data/sliderData';
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -20,14 +20,14 @@ const Header = () => {
     setActiveIndex(activeIndex - 1);
 
     if (activeIndex === 1) {
-      setActiveIndex(sliderContent.length);
+      setActiveIndex(sliderData.length);
     }
   };
 
   const handleSlideRight = (): void => {
     setActiveIndex(activeIndex + 1);
 
-    if (activeIndex === sliderContent.length) {
+    if (activeIndex === sliderData.length) {
       setActiveIndex(1);
     }
   };
@@ -36,7 +36,7 @@ const Header = () => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex + 1);
 
-      if (activeIndex === sliderContent.length) {
+      if (activeIndex === sliderData.length) {
         setActiveIndex(1);
       }
     }, 10000);
@@ -50,14 +50,14 @@ const Header = () => {
     <section className='header'>
       <div className='header__carousel' {...handlers}>
         <div className='header__overlay'></div>
-        {sliderContent.map((slide) => (
+        {sliderData.map((slide) => (
           <Slider slide={slide} activeIndex={activeIndex} />
         ))}
       </div>
       <SliderDots
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
-        sliderContent={sliderContent}
+        sliderData={sliderData}
       />
       <div className='header__arrows'>
         <div className='header__leftArrow' onClick={handleSlideLeft}>

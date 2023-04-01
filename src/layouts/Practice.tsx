@@ -1,3 +1,5 @@
+import PracticeCard from '@/components/PracticeCard';
+import { practiceData } from '@/data/practiceData';
 import React from 'react';
 import { GiThorHammer } from 'react-icons/gi';
 
@@ -22,6 +24,14 @@ const Practice = () => {
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat.
         </p>
+      </div>
+
+      <div className='practice__body'>
+        <div className='practice__content'>
+          {practiceData.map((practice) => (
+            <PracticeCard key={practice.id} {...practice} />
+          ))}
+        </div>
       </div>
     </section>
   );

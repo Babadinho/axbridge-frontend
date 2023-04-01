@@ -4,12 +4,15 @@
     margin: auto;
     gap: 3rem;
     margin-bottom: 5rem;
+    background-color: $color-lightGrey;
+    padding: 4rem 0.5rem 6rem 0.5rem;
 
     &__header {
         @include display-flex(center);
         flex-direction: column;
         gap: 1.4rem;
         max-width: 1150px;
+        margin-bottom: 1rem;
     }
 
     &__heading {
@@ -53,5 +56,96 @@
         max-width: 700px;
         text-align: center;
         font-size: 1rem;
+    }
+
+    &__body {
+        @include display-flex(center);
+        max-width: 1150px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    &__card {
+        position: relative;
+        height: 300px;
+        width: 370px;
+        z-index: 10;
+
+        &:hover .practice__cardOverlay {
+            height: 100%;
+            transition: all ease-in .5s;
+            background-color: $color-dark;
+            opacity: 0.94;
+            padding-top: 2.3rem;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    &__cardOverlay {
+        @include display-flex('flex-start');
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        background-color: $color-yellow-darker;
+        padding: 1.4rem;
+        opacity: 0.97;
+        height: 27%;
+        overflow: hidden;
+        transition: all ease-out .5s;
+    }
+
+    &__bodyHeader {
+        @include display-flex('center');
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        color: $color-white;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 2.5rem;
+            background-color: $color-yellow-darker;
+        }
+    }
+
+    &__bodyIcon {
+        font-size: 1.8rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description {
+        font-size: 1rem;
+        text-align: justify;
+        margin-bottom: 2.1rem;
+        color: $color-grey;
+    }
+
+    &__link {
+        @include display-flex('center');
+        @include button;
+        gap: 0.2rem;
+        text-decoration: none;
+        color: $color-white;
+        font-weight: 500;
     }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SliderDots = ({ activeIndex, setActiveIndex, sliderContent }: any) => {
+const SliderDots = ({ activeIndex, setActiveIndex, sliderData }: any) => {
   return (
     <div className='header__carouselDots'>
-      {sliderContent.map((slide: any) => (
+      {sliderData.map((slide: any) => (
         <span
           key={slide.id}
           className={`${

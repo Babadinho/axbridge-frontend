@@ -16,3 +16,13 @@ export interface SliderProps {
   slide: CarouselItem;
   activeIndex: number;
 }
+
+export interface PracticeItem {
+  id: number;
+  image: string;
+  icon: ReactElement;
+  title: string;
+  description: string;
+  link: string;
+}
+[];

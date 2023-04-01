@@ -3,13 +3,14 @@
     flex-direction: column;
     margin: auto;
     gap: 3rem;
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
 
     &__header {
         @include display-flex(center);
         flex-direction: column;
         gap: 1.4rem;
         max-width: 1150px;
+        margin-bottom: 1rem;
     }
 
     &__heading {

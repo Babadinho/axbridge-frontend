@@ -24,6 +24,26 @@
             max-width: 700px;
         }
     }
+
+    .practice {
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+
+        &__card {
+            height: 400px;
+            width: 700px;
+
+            &:hover .practice__cardOverlay {
+                padding-top: 6rem;
+            }
+        }
+
+        &__cardOverlay {
+            height: 20%;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -115,6 +135,12 @@
 
         &__hamburgerMenu {
             top: 95px;
+        }
+    }
+
+    .practice {
+        &__card {
+            width: 90vw;
         }
     }
 }
@@ -256,6 +282,22 @@
             max-width: 400px;
             font-size: 0.95rem;
         }
+
+        &__body {
+            width: 90vw;
+        }
+
+        &__card {
+            height: 320px;
+
+            &:hover .practice__cardOverlay {
+                padding-top: 3.5rem;
+            }
+        }
+
+        &__cardOverlay {
+            height: 25%;
+        }
     }
 }
 
@@ -337,6 +379,18 @@
         &__summary {
             max-width: 350px;
             font-size: 0.9rem;
+        }
+
+        &__card {
+            height: 320px;
+
+            &:hover .practice__cardOverlay {
+                padding-top: 3rem;
+            }
+        }
+
+        &__cardOverlay {
+            height: 24%;
         }
     }
 }

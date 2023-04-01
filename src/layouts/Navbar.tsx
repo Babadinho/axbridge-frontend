@@ -70,7 +70,7 @@ const Navbar = () => {
                   <span></span>
                   <Link href='#'>criminal law</Link>
                   <span></span>
-                  <Link href='#'>civil law</Link>
+                  <Link href='#'>business law</Link>
                 </span>
               </span>
               <span>|</span>
@@ -125,7 +125,7 @@ const Navbar = () => {
                     </Link>
                     <span></span>
                     <Link href='#'>
-                      <span>-</span>civil law
+                      <span>-</span>business law
                     </Link>
                     <span></span>
                   </span>

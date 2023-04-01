@@ -1,6 +1,6 @@
 import { Carousel } from '../../typings';
 
-export const sliderContent: Carousel = [
+export const sliderData: Carousel = [
   {
     id: 1,
     title: (
