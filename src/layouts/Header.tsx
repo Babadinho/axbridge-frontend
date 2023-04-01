@@ -51,7 +51,7 @@ const Header = () => {
       <div className='header__carousel' {...handlers}>
         <div className='header__overlay'></div>
         {sliderData.map((slide) => (
-          <Slider slide={slide} activeIndex={activeIndex} />
+          <Slider key={slide.id} slide={slide} activeIndex={activeIndex} />
         ))}
       </div>
       <SliderDots
