@@ -79,19 +79,8 @@
             height: 100%;
             transition: all ease-in .5s;
             background-color: rgba(30, 30, 30, 0.882);
-            padding-top: 2.3rem;
+            padding-top: 2.4rem;
             
-        }
-
-        &:hover .practice__bodyHeader {
-            &::after {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                top: 2.5rem;
-                background-color: $color-yellow-darker;
-            }
         }
     }
 
@@ -110,7 +99,7 @@
         flex-direction: column;
         position: absolute;
         bottom: 0;
-        background-color: rgba(187, 143, 24, 0.966);
+        background-color: rgba(30, 30, 30, 0.741);
         padding: 1.4rem;
         height: 27%;
         overflow: hidden;
@@ -123,11 +112,20 @@
         margin-bottom: 1rem;
         color: $color-white;
         position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 2.4rem;
+            background-color: $color-yellow-darker;
+        }
     }
 
     &__bodyIcon {
         font-size: 1.8rem;
-        color: $color-lightGrey;
+        color: $color-yellow-dark;
     }
 
     &__title {
