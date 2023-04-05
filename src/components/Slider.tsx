@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SliderProps } from '../../typings';
 
 const container = {
@@ -29,10 +30,11 @@ const Slider = ({ slide, activeIndex }: SliderProps) => {
           exit='exit'
           key={activeIndex}
         >
-          <img
+          <Image
             src={slide.image}
             alt='header-carousel-image'
             className='header__carouselItemImage'
+            fill
           />
 
           <div className='header__carouselItemContent'>

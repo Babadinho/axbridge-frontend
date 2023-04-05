@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { PracticeItem } from '../../typings';
 
 const PracticeCard = (practice: PracticeItem) => {
@@ -6,7 +7,12 @@ const PracticeCard = (practice: PracticeItem) => {
   return (
     <>
       <div className='practice__card'>
-        <img src={image} alt='practice-image' className='practice__image' />
+        <Image
+          src={image}
+          alt='practice-image'
+          className='practice__image'
+          fill
+        />
         <div className='practice__cardOverlay'>
           <div className='practice__bodyHeader'>
             <span className='practice__bodyIcon'>{icon}</span>

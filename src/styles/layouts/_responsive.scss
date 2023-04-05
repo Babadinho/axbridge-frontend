@@ -180,6 +180,12 @@
             max-width: 550px;
         }
     }
+
+    .team {
+        &__summary {
+            max-width: 550px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -299,6 +305,31 @@
             height: 25%;
         }
     }
+
+    .team {
+        &__heading {
+            font-size: 1.8rem;
+        }
+    
+        &__line {
+            width: 65px;
+        }
+    
+        &__icon {
+            font-size: 2.3rem;
+            height: 55px;
+            width: 55px;
+        }
+
+        &__summary {
+            max-width: 400px;
+            font-size: 0.95rem;
+        }
+
+        &__body {
+            width: 90vw;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -391,6 +422,27 @@
 
         &__cardOverlay {
             height: 24%;
+        }
+    }
+
+    .team {
+        &__heading {
+            font-size: 1.5rem;
+        }
+    
+        &__line {
+            width: 60px;
+        }
+    
+        &__icon {
+            font-size: 2.1rem;
+            height: 52px;
+            width: 52px;
+        }
+
+        &__summary {
+            max-width: 350px;
+            font-size: 0.9rem;
         }
     }
 }

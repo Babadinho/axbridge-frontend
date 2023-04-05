@@ -1,6 +1,7 @@
 import About from '@/layouts/About';
 import Header from '@/layouts/Header';
 import Practice from '@/layouts/Practice';
+import Team from '@/layouts/Team';
 import Head from 'next/head';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Header />
         <About />
         <Practice />
+        <Team />
       </main>
     </>
   );
