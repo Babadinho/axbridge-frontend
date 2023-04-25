@@ -456,18 +456,13 @@
             max-width: 350px;
             font-size: 0.9rem;
         }
-    }
-}
 
-@media (max-width: 375px) { 
-    .team {
         &__content {
-            max-width: 325px !important;
+            width: 90vw;
         }
-    
+
         &__card {
-            height: 370px !important;
-            width: 325px !important;
+            width: 100% !important;
         }
     }
 }
