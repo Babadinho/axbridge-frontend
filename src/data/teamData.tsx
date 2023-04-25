@@ -1,0 +1,58 @@
+import { TeamItem } from '../../typings';
+
+export const teamData: TeamItem[] = [
+  {
+    id: 1,
+    name: 'Josh Smith',
+    image: '/images/Team1.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+  {
+    id: 2,
+    name: 'Josh Smith',
+    image: '/images/Team2.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+  {
+    id: 3,
+    name: 'Josh Smith',
+    image: '/images/Team3.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+  {
+    id: 4,
+    name: 'Josh Smith',
+    image: '/images/Team1.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+  {
+    id: 5,
+    name: 'Josh Smith',
+    image: '/images/Team2.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+  {
+    id: 6,
+    name: 'Josh Smith',
+    image: '/images/Team3.jpg',
+    role: 'Attorney',
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+  },
+];

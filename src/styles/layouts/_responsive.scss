@@ -44,6 +44,12 @@
             height: 20%;
         }
     }
+
+    .team {
+        &__content {
+            max-width: 750px !important;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -141,6 +147,12 @@
     .practice {
         &__card {
             width: 90vw;
+        }
+    }
+
+    .team {
+        &__content {
+            max-width: 367px !important;
         }
     }
 }
@@ -443,6 +455,19 @@
         &__summary {
             max-width: 350px;
             font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 375px) { 
+    .team {
+        &__content {
+            max-width: 325px !important;
+        }
+    
+        &__card {
+            height: 370px !important;
+            width: 325px !important;
         }
     }
 }

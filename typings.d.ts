@@ -26,3 +26,14 @@ export interface PracticeItem {
   link: string;
 }
 [];
+
+export interface TeamItem {
+  id: number;
+  name: string;
+  image: string;
+  role: ReactElement;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+}
+[];

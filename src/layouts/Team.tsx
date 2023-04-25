@@ -1,5 +1,11 @@
 import React from 'react';
 import { IoIosPeople } from 'react-icons/io';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { teamData } from '../data/teamData';
+import TeamCard from '@/components/TeamCard';
 
 const Team = () => {
   return (
@@ -24,8 +30,30 @@ const Team = () => {
         </p>
       </div>
 
-      <div className='team__body'>
-        <div className='team__content'></div>
+      <div className='team__content'>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={25}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className='team__swiper'
+          breakpoints={{
+            1200: {
+              slidesPerView: 3,
+            },
+            800: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {teamData.map((team) => (
+            <SwiperSlide className='team__card' key={team.id}>
+              <TeamCard {...team} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
