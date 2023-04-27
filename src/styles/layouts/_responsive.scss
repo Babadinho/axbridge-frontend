@@ -341,6 +341,14 @@
         &__body {
             width: 90vw;
         }
+
+        &__content {
+            width: 95vw;
+        }
+
+        &__card {
+            width: 100% !important;
+        }
     }
 }
 
@@ -458,11 +466,20 @@
         }
 
         &__content {
-            width: 90vw;
+            width: 100%;
         }
 
         &__card {
             width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .team {
+        &__content {
+            width: 100%;
+            padding: 1.2rem;
         }
     }
 }
