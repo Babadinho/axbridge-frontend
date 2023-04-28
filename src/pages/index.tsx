@@ -1,4 +1,5 @@
 import About from '@/layouts/About';
+import Blog from '@/layouts/Blog';
 import Header from '@/layouts/Header';
 import Practice from '@/layouts/Practice';
 import Team from '@/layouts/Team';
@@ -18,6 +19,7 @@ export default function Home() {
         <About />
         <Practice />
         <Team />
+        <Blog />
       </main>
     </>
   );
