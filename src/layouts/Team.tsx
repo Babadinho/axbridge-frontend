@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoIosPeople } from 'react-icons/io';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -8,6 +8,7 @@ import { teamData } from '../data/teamData';
 import TeamCard from '@/components/TeamCard';
 
 const Team = () => {
+  const [activeTeam, setActiveTeam] = useState<number>();
   return (
     <section className='team'>
       <div className='team__header'>
@@ -49,7 +50,17 @@ const Team = () => {
           }}
         >
           {teamData.map((team) => (
-            <SwiperSlide className='team__card' key={team.id}>
+            <SwiperSlide
+              className={`team__card ${
+                activeTeam === team.id && 'team__card--active'
+              }`}
+              key={team.id}
+              onClick={() =>
+                activeTeam === team.id
+                  ? setActiveTeam(99)
+                  : setActiveTeam(team.id)
+              }
+            >
               <TeamCard {...team} />
             </SwiperSlide>
           ))}

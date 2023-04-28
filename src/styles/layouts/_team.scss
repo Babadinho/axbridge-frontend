@@ -70,13 +70,13 @@
         height: 430px !important;
         width: 366.6px !important;
 
-        &:hover .team__details {
+        &--active .team__details {
             height: 110px;
             transition: all ease-in .3s;
             background-color: rgba(30, 30, 30, 0.651);
         }
 
-        &:hover .team__name {
+        &--active .team__name {
             padding-top: 0;
             transition: padding-top ease-in .3s;
         }
