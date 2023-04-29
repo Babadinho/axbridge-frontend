@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { IoIosPeople } from 'react-icons/io';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -9,6 +9,22 @@ import TeamCard from '@/components/TeamCard';
 
 const Team = () => {
   const [activeTeam, setActiveTeam] = useState<number>();
+  const swiperRef = useRef<SwiperRef>(null);
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (
+      swiperRef.current &&
+      !swiperRef.current.swiper.el.contains(e.target as Node)
+    ) {
+      setActiveTeam(99);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <section className='team'>
       <div className='team__header'>
@@ -48,6 +64,7 @@ const Team = () => {
               slidesPerView: 2,
             },
           }}
+          ref={swiperRef}
         >
           {teamData.map((team) => (
             <SwiperSlide
