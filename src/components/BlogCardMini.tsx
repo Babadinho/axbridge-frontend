@@ -20,22 +20,15 @@ const BlogCardMini = ({
         <span className='blog__dateMini'>{date}</span>
       </div>
 
-      <div className='blog__infoMini'>
+      <div className='blog__bodyMini'>
+        <Link href={'#'} className='blog__categoryMini'>
+          {category}
+        </Link>
         <h4 className='blog__titleMini'>{title}</h4>
-        <div className='blog__dataMini'>
-          <Link href={'#'} className='blog__categoryMini'>
-            {category}
-          </Link>
-          <Link href={'#'} className='blog__authorMini'>
-            <FaUser />
-            by {author}
-          </Link>
-          <span className='blog__commentsMini'>
-            <FaComments />
-            {comments}
-          </span>
-        </div>
-        {/* <p className='blog__descriptionMini'>{description}</p> */}
+        <p className='blog__descriptionMini'>{description}</p>
+        <Link href={'#'} className='blog__authorMini'>
+          {author}
+        </Link>
       </div>
     </div>
   );

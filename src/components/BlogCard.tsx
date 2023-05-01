@@ -20,21 +20,14 @@ const BlogCard = ({
       </div>
       <span className='blog__date'>{date}</span>
       <div className='blog__body'>
-        <div className='blog__info'>
-          <Link href={'#'} className='blog__category'>
-            {category}
-          </Link>
-          <Link href={'#'} className='blog__author'>
-            <FaUser />
-            by {author}
-          </Link>
-          <span className='blog__comments'>
-            <FaComments />
-            {comments}
-          </span>
-        </div>
+        <Link href={'#'} className='blog__category'>
+          {category}
+        </Link>
         <h4 className='blog__title'>{title}</h4>
         <p className='blog__description'>{description}</p>
+        <Link href={'#'} className='blog__author'>
+          {author}
+        </Link>
       </div>
     </div>
   );

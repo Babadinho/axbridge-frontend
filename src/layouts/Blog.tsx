@@ -33,7 +33,7 @@ const Blog = () => {
             date={'Mar 13, 2023'}
             image='/images/Blog.jpg'
             category='Crime'
-            author={'Attorney'}
+            author={'Franklyn Ohai'}
             comments={5}
             title={'Criminal Law and Interpreting the Standard of Proof'}
             description={
@@ -45,7 +45,7 @@ const Blog = () => {
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
             category='Crime'
-            author={'Attorney'}
+            author={'Franklyn Ohai'}
             comments={5}
             title={'Criminal Law and Interpreting the Standard of Proof'}
             description={
@@ -59,9 +59,9 @@ const Blog = () => {
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
             category='Crime'
-            author={'Attorney'}
+            author={'Franklyn Ohai'}
             comments={5}
-            title={'Criminal Law and Interpreting the Standard of Proof'}
+            title={'Criminal and Interpreting the Standard of Proof'}
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
@@ -71,9 +71,9 @@ const Blog = () => {
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
             category='Crime'
-            author={'Attorney'}
+            author={'Franklyn Ohai'}
             comments={5}
-            title={'Criminal Law and Interpreting the Standard of Proof'}
+            title={'Criminal and Interpreting the Standard of Proof'}
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
@@ -83,21 +83,9 @@ const Blog = () => {
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
             category='Crime'
-            author={'Attorney'}
+            author={'Franklyn Ohai'}
             comments={5}
-            title={'Criminal Law and Interpreting the Standard of Proof'}
-            description={
-              'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-            }
-          />
-          <BlogCardMini
-            id={1}
-            date={'Mar 13, 2023'}
-            image={'/images/Blog.jpg'}
-            category='Crime'
-            author={'Attorney'}
-            comments={5}
-            title={'Criminal Law and Interpreting the Standard of Proof'}
+            title={'Criminal and Interpreting the Standard of Proof'}
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
