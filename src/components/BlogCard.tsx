@@ -1,0 +1,43 @@
+import React from 'react';
+import Image from 'next/image';
+import { BlogItem } from '../../typings';
+import { FaUser, FaComments } from 'react-icons/fa';
+import Link from 'next/link';
+
+const BlogCard = ({
+  image,
+  date,
+  category,
+  author,
+  comments,
+  title,
+  description,
+}: BlogItem) => {
+  return (
+    <div className='blog__card'>
+      <div className='blog__image'>
+        <Image src={image} alt='team-image' fill />
+      </div>
+      <span className='blog__date'>{date}</span>
+      <div className='blog__body'>
+        <div className='blog__info'>
+          <Link href={'#'} className='blog__category'>
+            {category}
+          </Link>
+          <Link href={'#'} className='blog__author'>
+            <FaUser />
+            by {author}
+          </Link>
+          <span className='blog__comments'>
+            <FaComments />
+            {comments}
+          </span>
+        </div>
+        <h4 className='blog__title'>{title}</h4>
+        <p className='blog__description'>{description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default BlogCard;

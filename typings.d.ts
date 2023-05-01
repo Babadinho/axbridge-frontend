@@ -37,3 +37,14 @@ export interface TeamItem {
   instagram: string;
 }
 [];
+
+export interface BlogItem {
+  id: number;
+  date: string;
+  image: string;
+  author: string;
+  category: string;
+  comments: number;
+  title: string;
+  description: string;
+}

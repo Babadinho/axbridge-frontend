@@ -11,7 +11,6 @@
         @include display-flex(center);
         flex-direction: column;
         gap: 1.4rem;
-        max-width: 1150px;
         margin-bottom: 1rem;
     }
 
@@ -57,4 +56,174 @@
         text-align: center;
         font-size: 1rem;
     }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 1150px;
+    }
+
+    &__big {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    &__small {
+        @include display-flex(flex-start);
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__card {
+        width: 360px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    &__body {
+        background: $color-white;
+    }
+
+    &__image {
+        height: 240px;
+        position: relative;
+
+        & img {
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    &__date {
+        @include display-flex(center);
+        background-color: $color-yellow-darker;
+        height: 35px;
+        width: 100px;
+        color: $color-white;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__info {
+        @include display-flex(flex-start);
+        gap: 1rem;
+
+        & svg {
+            color: $color-yellow-darker;
+            padding-bottom: 0.17rem
+        }
+    }
+
+    &__author, &__comments, &__category {
+        @include display-flex(center);
+        gap: 0.1rem;
+        font-size: 0.95rem;
+    }
+
+    &__author {
+        text-decoration: none;
+        color: $color-dark;
+    }
+
+    &__category {
+        background-color: $color-yellow-darker;
+        text-transform: capitalize;
+        height: 30px;
+        padding: 0.1rem 0.67rem;
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 28px;
+        padding: 0.8rem 0.8rem 0 0.7rem;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
+        text-align: justify;
+        padding: 0 0.8rem 1rem 0.7rem;
+    }
+
+    &__cardMini {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 360px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    &__imageMini {
+        height: 85px;
+        width: 100px;
+        position: relative;
+
+        & img {
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    &__titleMini {
+        font-size: 1.05rem;
+        font-weight: 500;
+        line-height: 25px;
+    }
+
+    &__dateMini {
+        @include display-flex(center);
+        background-color: $color-yellow-darker;
+        height: 20px;
+        width: 65px;
+        color: $color-white;
+        position: absolute;
+        font-size: 0.6rem;
+        top: 0rem;
+        right: 0rem;
+    }
+
+    &__dataMini {
+        @include display-flex(flex-start);
+        gap: 1rem;
+        font-size: 0.7rem;
+        margin-top: 0.2rem;
+    }
+
+    &__infoMini {
+        width: calc(360px - 90px);
+        background: $color-white;
+        padding: 0.1rem 1rem 0.3rem 1rem;
+    }
+
+    &__categoryMini {
+        @include display-flex(center);
+        background-color: $color-yellow-darker;
+        text-transform: capitalize;
+        padding: 0.05rem 0.3rem;
+        color: $color-white;
+        text-decoration: none; 
+    }
+
+    &__authorMini, &__commentsMini {
+        @include display-flex(center);
+        gap: 0.3rem;
+        font-size: 0.9rem;
+
+        & svg {
+            font-size: 0.8rem;
+            color: $color-yellow-darker;
+        }
+    }
+
+    &__authorMini {
+        text-decoration: none;
+        color: $color-dark;
+    }
+
 }
