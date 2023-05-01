@@ -79,16 +79,15 @@
     &__card {
         width: 360px;
         position: relative;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        background: $color-white;
     }
 
     &__body {
-        background: $color-white;
-        padding: 0.8rem 0.8rem 0.9rem 0.7rem;
+        padding: 1rem 0.8rem 1rem 1rem;
     }
 
     &__image {
-        height: 240px;
+        height: 230px;
         position: relative;
 
         & img {
@@ -110,10 +109,7 @@
     }
 
     &__category {
-        @include display-flex(flex-start);
-        gap: 0.1rem;
         font-size: 0.95rem;
-        margin-bottom: 0.5rem;
     }
 
     &__author, &__category {
@@ -125,9 +121,22 @@
     }
 
     &__title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 500;
         line-height: 28px;
+        margin-top: 0.5rem;
+        letter-spacing: 0.05rem;
+
+        & a {
+            text-decoration: none;
+            color: $color-title;
+            transition: color ease-out .2s;
+
+            &:hover {
+                color: $color-dark;
+                transition: color ease-in .2s;
+            }
+        }
     }
 
     &__description {
@@ -141,7 +150,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 360px;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     }
 
     &__imageMini {
@@ -159,18 +167,31 @@
     &__bodyMini {
         width: calc(360px - 130px);
         background: $color-white;
-        padding: 0.1rem 0.8rem 0rem 1rem;
+        padding: 0.1rem 1rem 0rem 1rem;
     }
 
     &__titleMini {
-        font-size: 1rem;
+        font-size: 0.97rem;
         font-weight: 500;
-        line-height: 25px;
+        line-height: 23px;
+        letter-spacing: 0.05rem;
+
+        & a {
+            text-decoration: none;
+            color: $color-title;
+            transition: color ease-out .2s;
+
+            &:hover {
+                color: $color-dark;
+                transition: color ease-in .2s;
+            }
+        }
     }
 
     &__descriptionMini {
-        font-size: 0.88rem;
-        margin-bottom: 0.2rem
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+        text-align: justify;
     }
 
     &__dateMini {
@@ -192,5 +213,10 @@
         font-size: 0.73rem;
         font-weight: 500;
         letter-spacing: 0.05rem;
+    }
+
+
+    &__button {
+        @include button;
     }
 }

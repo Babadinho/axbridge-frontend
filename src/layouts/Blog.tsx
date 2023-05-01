@@ -1,5 +1,6 @@
 import BlogCard from '@/components/BlogCard';
 import BlogCardMini from '@/components/BlogCardMini';
+import Link from 'next/link';
 import React from 'react';
 import { TbNews } from 'react-icons/tb';
 
@@ -92,6 +93,9 @@ const Blog = () => {
           />
         </div>
       </div>
+      <Link href='#' className='blog__button'>
+        More from Our Blog
+      </Link>
     </section>
   );
 };

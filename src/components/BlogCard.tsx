@@ -23,7 +23,9 @@ const BlogCard = ({
         <Link href={'#'} className='blog__category'>
           {category}
         </Link>
-        <h4 className='blog__title'>{title}</h4>
+        <h4 className='blog__title'>
+          <Link href={'#'}>{title}</Link>
+        </h4>
         <p className='blog__description'>{description}</p>
         <Link href={'#'} className='blog__author'>
           {author}

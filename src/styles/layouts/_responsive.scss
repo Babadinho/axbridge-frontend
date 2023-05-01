@@ -50,6 +50,18 @@
             max-width: 750px !important;
         }
     }
+
+    .blog {
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__small {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -153,6 +165,54 @@
     .team {
         &__content {
             max-width: 367px !important;
+        }
+    }
+
+    .blog {
+        &__big {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+
+        &__small {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+
+        
+        &__card, &__cardMini {
+            width: 90vw;
+        }
+        
+        &__categoryMini, &__authorMini {
+            font-size: 0.7rem;
+        }
+
+        &__imageMini {
+            height: 140px;
+            width: 30vw;
+            position: relative;
+    
+            & img {
+                position: absolute;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        &__bodyMini {
+            width: 60vw;
+            background: $color-white;
+            padding: 0.1rem 1rem 0rem 1rem;
+        }
+
+        &__titleMini {
+            font-size: 0.87rem;
+        }
+
+        &__descriptionMini {
+            font-size: 0.83rem;
         }
     }
 }
@@ -305,10 +365,6 @@
         &__summary {
             max-width: 400px;
             font-size: 0.95rem;
-        }
-
-        &__body {
-            width: 90vw;
         }
 
         &__card {
@@ -514,11 +570,6 @@
             font-size: 2.1rem;
             height: 52px;
             width: 52px;
-        }
-
-        &__summary {
-            max-width: 350px;
-            font-size: 0.9rem;
         }
     }
 }

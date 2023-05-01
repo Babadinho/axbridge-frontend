@@ -24,7 +24,9 @@ const BlogCardMini = ({
         <Link href={'#'} className='blog__categoryMini'>
           {category}
         </Link>
-        <h4 className='blog__titleMini'>{title}</h4>
+        <h4 className='blog__titleMini'>
+          <Link href={'#'}>{title}</Link>
+        </h4>
         <p className='blog__descriptionMini'>{description}</p>
         <Link href={'#'} className='blog__authorMini'>
           {author}
