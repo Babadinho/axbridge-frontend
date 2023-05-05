@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { MdLocationOn } from 'react-icons/md';
+import {
+  MdAccessTime,
+  MdLocationPin,
+  MdOutlineSmartphone,
+} from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { FaTiktok } from 'react-icons/fa';
@@ -14,13 +18,33 @@ const Navbar = () => {
       <div className='navbar__wrapper'>
         <div className='navbar__topBar'>
           <div className='navbar__topBarContainer'>
-            <div className='navbar__topBarLocation'>
-              <span className='navbar__address'>
-                <span>
-                  <MdLocationOn className='navbar__icon' size={18} />
+            <div className='navbar__topBarDetails'>
+              <div className='navbar__topBarDetailsWrapper'>
+                <span className='navbar__topBarIcon'>
+                  <MdOutlineSmartphone />
                 </span>
-                Plot 596 Independence Avenue, Central Business District, Abuja
-              </span>
+                <div className='navbar__topBarDetailsItem'>
+                  <span className='navbar__topBarDetailsItem--Main'>
+                    +234 900 234 5675
+                  </span>
+                  <span className='navbar__topBarDetailsItem--Sub'>
+                    legal@axbridgepartners.com
+                  </span>
+                </div>
+              </div>
+              <div className='navbar__topBarDetailsWrapper'>
+                <span className='navbar__topBarIcon'>
+                  <MdLocationPin />
+                </span>
+                <div className='navbar__topBarDetailsItem'>
+                  <span className='navbar__topBarDetailsItem--Main'>
+                    Plot 596 Independence Avenue
+                  </span>
+                  <span className='navbar__topBarDetailsItem--Sub'>
+                    Central Business District, Abuja
+                  </span>
+                </div>
+              </div>
             </div>
             <div className='navbar__topBarRight'>
               <div className='navbar__socials'>
@@ -37,9 +61,6 @@ const Navbar = () => {
                   <FaTiktok size={17} />
                 </Link>
               </div>
-              {/* <div className='navbar__button'>
-                <Link href='#'>consult for free</Link>
-              </div> */}
             </div>
           </div>
         </div>
@@ -66,11 +87,11 @@ const Navbar = () => {
                     activeSubMenu && 'navbar__submenu--active'
                   }`}
                 >
-                  <Link href='#'>family law</Link>
+                  <Link href='#'>family</Link>
                   <span></span>
-                  <Link href='#'>criminal law</Link>
+                  <Link href='#'>criminal</Link>
                   <span></span>
-                  <Link href='#'>business law</Link>
+                  <Link href='#'>business</Link>
                 </span>
               </span>
               <span>|</span>
@@ -117,15 +138,15 @@ const Navbar = () => {
                     }`}
                   >
                     <Link href='#'>
-                      <span>-</span>family law
+                      <span>-</span>family
                     </Link>
                     <span></span>
                     <Link href='#'>
-                      <span>-</span>criminal law
+                      <span>-</span>criminal
                     </Link>
                     <span></span>
                     <Link href='#'>
-                      <span>-</span>business law
+                      <span>-</span>business
                     </Link>
                     <span></span>
                   </span>

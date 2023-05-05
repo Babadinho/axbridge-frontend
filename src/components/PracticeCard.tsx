@@ -15,7 +15,7 @@ const PracticeCard = (practice: PracticeItem) => {
         />
         <div className='practice__cardOverlay'>
           <div className='practice__bodyHeader'>
-            <span className='practice__bodyIcon'>{icon}</span>
+            {/* <span className='practice__bodyIcon'>{icon}</span> */}
             <h2 className='practice__title'>{title}</h2>
           </div>
           <p className='practice__description'>{description}</p>

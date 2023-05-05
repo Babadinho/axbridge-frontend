@@ -152,7 +152,7 @@
         }
 
         &__hamburgerMenu {
-            top: 95px;
+            top: 131px;
         }
     }
 
@@ -218,6 +218,22 @@
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        &__topBarDetailsWrapper {
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+
+        &__topBarIcon {
+            height: 45px;
+            width: 45px;
+            font-size: 1.6rem;
+
+        }
+    }
+
     .header {
         &__carouselItemTitle {
             font-size: 2.7rem;
@@ -267,32 +283,6 @@
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        &__topBarContainer {
-            @include display-flex(center);
-            flex-direction: column;
-            max-width: 350px;
-            gap: 0.3rem;
-            padding: 0.1rem 0 0.1rem 0
-        }
-
-        &__address {
-            @include display-flex(flex-start);
-            align-items: flex-start;
-            text-align: center;
-            gap: unset;
-
-            & span {
-                margin-right: -0.7rem;
-                padding-top: 0.07rem;
-            }
-        }
-
-        &__hamburgerMenu {
-            top: 146px;
-        }
-    }
-
     .header {
         margin-bottom: 5rem;
 
@@ -436,14 +426,6 @@
 }
 
 @media (max-width: 450px) {
-    .navbar {
-        &__address {
-            & span {
-                margin-right: -0.3rem;
-            }
-        }
-    }
-
     .header {
         &__carouselItemContent {
             gap: 0.5rem;
