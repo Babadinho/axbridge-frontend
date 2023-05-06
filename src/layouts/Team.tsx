@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { IoIosPeople } from 'react-icons/io';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Pagination } from 'swiper';
-import 'swiper/css';
+import 'swiper/swiper.min.css';
 import 'swiper/css/pagination';
 import { teamData } from '../data/teamData';
 import TeamCard from '@/components/TeamCard';

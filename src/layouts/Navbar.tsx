@@ -1,10 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {
-  MdAccessTime,
-  MdLocationPin,
-  MdOutlineSmartphone,
-} from 'react-icons/md';
+import { MdLocationPin, MdOutlineSmartphone } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { FaTiktok } from 'react-icons/fa';

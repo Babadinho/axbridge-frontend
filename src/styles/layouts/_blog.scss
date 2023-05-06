@@ -60,14 +60,14 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
         max-width: 1150px;
     }
 
     &__big {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     &__small {
@@ -77,7 +77,7 @@
     }
 
     &__card {
-        width: 360px;
+        width: 370px;
         position: relative;
         background: $color-white;
     }
@@ -149,7 +149,7 @@
     &__cardMini {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 360px;
+        width: 370px;
     }
 
     &__imageMini {
@@ -165,7 +165,7 @@
     }
 
     &__bodyMini {
-        width: calc(360px - 130px);
+        width: calc(370px - 130px);
         background: $color-white;
         padding: 0.1rem 1rem 0rem 1rem;
     }

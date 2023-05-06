@@ -1,3 +1,5 @@
+'use client';
+
 import SliderDots from '@/components/SliderDots';
 import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
