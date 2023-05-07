@@ -40,10 +40,10 @@ const Testimonials = () => {
           pagination={{
             clickable: true,
           }}
-          //   autoplay={{
-          //     delay: 5000,
-          //     disableOnInteraction: false,
-          //   }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           modules={[Autoplay, Pagination]}
           className='testimonials__swiper'
         >
