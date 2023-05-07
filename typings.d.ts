@@ -48,3 +48,12 @@ export interface BlogItem {
   title: string;
   description: string;
 }
+
+interface TestimonialItem {
+  id: number;
+  title: string;
+  description: string;
+  author: string;
+  company: string;
+}
+[];

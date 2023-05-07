@@ -70,15 +70,21 @@
         height: 430px !important;
         width: 366.6px !important;
 
-        &--active .team__details {
-            height: 110px;
-            transition: all ease-in .3s;
-            background-color: rgba(30, 30, 30, 0.651);
-        }
+        &--active {
+            .team__details {
+                height: 110px;
+                transition: all ease-in .3s;
+                background-color: rgba(187, 143, 24, 0.855);
+            }
 
-        &--active .team__name {
-            padding-top: 0;
-            transition: padding-top ease-in .3s;
+            .team__name {
+                padding-top: 0;
+                transition: padding-top ease-in .3s;
+            }
+
+            .team__socials {
+                padding-top: 0.7rem;
+            }
         }
     }
 
@@ -98,7 +104,7 @@
         @include display-flex(center);
         flex-direction: column;
         padding: 0.7rem 0 1rem 0;
-        background-color: rgba(30, 30, 30, 0.882);
+        background-color: rgba(187, 143, 24, 0.855);
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -111,30 +117,30 @@
     &__name {
         font-size: 1.3rem;
         font-weight: 600;
-        padding-top: 3rem;
+        padding-top: 4rem;
         transition: padding-top ease-out .3s;
     }
 
-    &__role {
+    // &__role {
 
-        &::after {
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 50px;
-            top: 4.3rem;
-            left: 0; 
-            right: 0; 
-            margin-left: auto; 
-            margin-right: auto; 
-            background-color: $color-yellow-darker;
-        }
-    }
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //         height: 2px;
+    //         width: 50px;
+    //         top: 4.3rem;
+    //         left: 0; 
+    //         right: 0; 
+    //         margin-left: auto; 
+    //         margin-right: auto; 
+    //         background-color: $color-white;
+    //     }
+    // }
 
     &__socials {
         @include display-flex(center);
         gap: 0.5rem;
-        padding-top: 1.5rem;
+        padding-top: 1.1rem;
         
         & a {
             @include display-flex(center);
@@ -142,13 +148,13 @@
             width: 35px;
             border-radius: 50%;
             font-size: 1.1rem;
-            background-color: $color-yellow-dark;
-            color: $color-white;
+            background-color: $color-white;
+            color: $color-yellow-darker;
             transition: all ease-out .5s;
 
             &:hover {
-                background-color: $color-white;
-                color: $color-yellow-dark;
+                background-color: $color-lightGrey;
+                color: $color-yellow-darkest;
                 transition: all ease-in .5s ;
             }
         }

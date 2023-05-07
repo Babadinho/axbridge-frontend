@@ -1,0 +1,33 @@
+.contact {
+    background-color: $color-yellow-darker;
+    padding: 2.5rem 0 2.5rem 0;
+    @include display-flex('center');
+
+    &__wrapper {
+        max-width: 1150px;
+        @include display-flex('center');
+        margin: auto;
+        gap: 4rem;
+        font-family: 'Jost', sans-serif;
+    }
+
+    &__text {
+        color: $color-white;
+        font-size: 1.45em;
+        text-align: center;
+    }
+
+    &__button {
+        @include display-flex('center');
+        gap: 0.3rem;
+        @include button;
+        background-color: $color-white;
+        color: $color-yellow-darker;
+        font-weight: 600;
+        font-size: 0.95rem;
+
+        &:hover {
+            background-color: $color-light;
+        }
+    }
+}

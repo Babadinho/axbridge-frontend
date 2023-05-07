@@ -1,8 +1,10 @@
 import About from '@/layouts/About';
 import Blog from '@/layouts/Blog';
+import Contact from '@/layouts/Contact';
 import Header from '@/layouts/Header';
 import Practice from '@/layouts/Practice';
 import Team from '@/layouts/Team';
+import Testimonials from '@/layouts/Testimonials';
 import Head from 'next/head';
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
         <Practice />
         <Team />
         <Blog />
+        <Testimonials />
+        <Contact />
       </main>
     </>
   );

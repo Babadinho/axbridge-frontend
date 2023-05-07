@@ -62,6 +62,37 @@
             gap: 1.7rem;
         }
     }
+
+    .testimonials {
+        &__body {
+            max-width: 760px !important;
+        }
+
+        &__quoteLeft {
+            left: 2rem;
+            top: 5rem;
+        }
+    
+        &__quoteRight {
+            right: 2rem;
+            top: 5rem;
+        }
+    }
+
+    .contact {
+        &__wrapper {
+            width: 90vw;
+        }
+
+        &__text {
+            font-size: 1.3em
+        }
+    
+        &__button {
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -82,6 +113,15 @@
         &__arrows {
             display: none;
         }
+    }
+
+    .contact {
+        &__wrapper {
+            @include display-flex('center');
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
     }
 }
 
@@ -215,6 +255,23 @@
             font-size: 0.83rem;
         }
     }
+
+    .testimonials {
+        &__body {
+            width: 90vw !important;
+        }
+    }
+
+    .contact {
+        &__text {
+            font-size: 1.3em
+        }
+
+        &__button {
+            font-size: 0.9rem;
+        }
+
+    }
 }
 
 @media (max-width: 768px) {
@@ -279,6 +336,40 @@
         &__summary {
             max-width: 550px;
         }
+    }
+
+    .testimonials {
+
+        &__summary {
+            max-width: 550px;
+        }
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+        &__description {
+            font-size: 0.93rem;
+        }
+
+        &__quoteRight, &__quoteLeft {
+            font-size: 2.1rem;
+        }
+
+        &__author {
+            font-size: 0.9rem;
+        }
+    }
+
+    .contact {
+        &__text {
+            font-size: 1.2em
+        }
+
+        &__button {
+            font-size: 0.9rem;
+        }
+
     }
 }
 
@@ -423,6 +514,60 @@
             font-size: 0.95rem;
         }
     }
+
+    .testimonials {
+        &__heading {
+            font-size: 1.8rem;
+        }
+    
+        &__line {
+            width: 65px;
+        }
+    
+        &__icon {
+            font-size: 2.3rem;
+            height: 55px;
+            width: 55px;
+        }
+
+        &__summary {
+            max-width: 400px;
+            font-size: 0.95rem;
+        }
+
+        &__title {
+            font-size: 1.25rem;
+        }
+
+        &__description {
+            font-size: 0.9rem;
+        }
+
+        &__quoteRight, &__quoteLeft {
+            font-size: 2rem;
+        }
+
+        &__author {
+            font-size: 0.92rem;
+        }
+
+        &__company {
+            font-size: 0.9rem;
+        }
+    }
+
+    .contact {
+        padding: 2.5rem 1rem 2.5rem 1rem;
+
+        &__text {
+            font-size: 1.2em
+        }
+
+        &__button {
+            font-size: 0.9rem;
+        }
+
+    }
 }
 
 @media (max-width: 450px) {
@@ -552,6 +697,67 @@
             font-size: 2.1rem;
             height: 52px;
             width: 52px;
+        }
+
+        &__summary {
+            max-width: 350px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .testimonials {
+        &__heading {
+            font-size: 1.5rem;
+        }
+    
+        &__line {
+            width: 60px;
+        }
+    
+        &__icon {
+            font-size: 2.1rem;
+            height: 52px;
+            width: 52px;
+        }
+
+        &__summary {
+            max-width: 350px;
+            font-size: 0.9rem;
+        }
+
+        &__content, &__body {
+            height: 100% !important;
+        }
+
+        &__title {
+            font-size: 1.2rem;
+            padding: 0 3rem 0 3rem;
+        }
+
+        &__description {
+            font-size: 0.85rem;
+            padding: 0 4rem 0 4rem;
+        }
+
+        &__quoteRight {
+            font-size: 1.95rem;
+            right: 1rem;
+            top: 7rem;
+        }
+        
+        
+        &__quoteLeft {
+            font-size: 1.95rem;
+            left: 1rem;
+            top: 7rem;
+        }
+
+        &__author {
+            font-size: 0.92rem;
+        }
+
+        &__company {
+            font-size: 0.9rem;
         }
     }
 }

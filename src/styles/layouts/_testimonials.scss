@@ -1,0 +1,139 @@
+.testimonials {
+    @include display-flex(center);
+    flex-direction: column;
+    margin: auto;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    padding: 4rem 0.5rem 6rem 0.5rem;
+
+    &__header {
+        @include display-flex(center);
+        flex-direction: column;
+        gap: 1.4rem;
+        max-width: 1150px;
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        white-space: nowrap; 
+        overflow: hidden;
+        color: $color-title;
+        font-weight: 400;
+    }
+
+    &__symbol {
+        @include display-flex(center);
+        flex-direction: row;
+        gap: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__line {
+        height: 2px;
+        width: 70px;
+        background-color: $color-yellow-darker;
+    }
+
+    &__icon {
+        @include display-flex(center);
+        background-color: $color-yellow-darker;
+        color: $color-light;
+        font-size: 2.5rem;
+        height: 60px;
+        width: 60px;
+        transform: rotate(-45deg);
+
+        & span {
+            transform: rotate(45deg);
+            padding-top: 0.3rem;
+        }
+    }
+
+    &__summary {
+        max-width: 700px;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+    &__body {
+        max-width: 1150px !important;
+    }
+
+    &__content {
+        position: relative;
+        @include display-flex(center);
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: $color-lightGrey;
+        padding: 2.5rem 0 2.5rem 0;
+    }
+
+    &__swiper {
+        width: 100%;
+        padding-bottom: 60px !important;
+    }
+
+    &__quoteLeft {
+        position: absolute;
+        left: 4rem;
+        top: 5rem;
+        font-size: 2.5rem;
+        color: $color-yellow-darkest;
+    }
+
+    &__quoteRight {
+        position: absolute;
+        right: 4rem;
+        top: 5rem;
+        font-size: 2.5rem;
+        color: $color-yellow-darkest;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+        color: $color-title;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 0.97rem;
+        letter-spacing: 0.05rem;
+        max-width: 900px;
+        padding: 0 5rem 0 5rem;
+        color: #777777;
+        margin-bottom: 1rem;
+    }
+
+    &__author {
+        font-size: 0.95rem;
+        color: $color-yellow-darkest;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__company {
+        font-weight: 500;
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+
+        &-bullet {
+            height: 12px;
+            width: 12px;
+        }
+
+        &-bullet-active {
+            background: $color-yellow-darker;
+        }
+    }
+}
