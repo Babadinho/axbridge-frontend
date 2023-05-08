@@ -27,21 +27,7 @@
 
     .practice {
         &__content {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1.5rem;
-        }
-
-        &__card {
-            height: 400px;
-            width: 700px;
-
-            &:hover .practice__cardOverlay {
-                padding-top: 6rem;
-            }
-        }
-
-        &__cardOverlay {
-            height: 20%;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -197,6 +183,10 @@
     }
 
     .practice {
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         &__card {
             width: 90vw;
         }
@@ -450,14 +440,6 @@
 
         &__card {
             height: 320px;
-
-            &:hover .practice__cardOverlay {
-                padding-top: 3.5rem;
-            }
-        }
-
-        &__cardOverlay {
-            height: 25%;
         }
     }
 
@@ -644,14 +626,6 @@
 
         &__card {
             height: 320px;
-
-            &:hover .practice__cardOverlay {
-                padding-top: 3rem;
-            }
-        }
-
-        &__cardOverlay {
-            height: 24%;
         }
     }
 
