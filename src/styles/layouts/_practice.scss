@@ -41,7 +41,7 @@
         @include display-flex(center);
         background-color: $color-yellow-darker;
         color: $color-light;
-        font-size: 2.5rem;
+        font-size: 3rem;
         height: 60px;
         width: 60px;
         transform: rotate(-45deg);
@@ -101,44 +101,41 @@
         position: absolute;
         bottom: 0;
         background-color: rgba(187, 143, 24, 0.855);
-        padding: 1.4rem;
+        padding: 1.3rem;
         height: 100%;
         overflow: hidden;
         transition: all ease-out .5s;
     }
 
     &__bodyHeader {
-        @include display-flex('center');
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         color: $color-white;
         position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            top: 2.4rem;
-            background-color: $color-white;
-        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     height: 2px;
+        //     width: 100%;
+        //     top: 2.4rem;
+        //     background-color: $color-white;
+        // }
     }
 
     &__bodyIcon {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         color: $color-white;
     }
 
     &__title {
         font-size: 1.5rem;
-        margin-bottom: 0.4rem;
         font-weight: 600;
     }
 
     &__description {
         font-size: 1rem;
         text-align: justify;
-        margin-bottom: 2.1rem;
+        margin-bottom: 1.5rem;
         color: $color-white;
     }
 
