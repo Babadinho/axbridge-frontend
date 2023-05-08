@@ -79,6 +79,15 @@
             white-space: nowrap;
         }
     }
+
+    .footer {
+
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 800px !important;
+            gap: 5rem;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -361,6 +370,15 @@
         }
 
     }
+
+    .footer {
+
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 90vw !important;
+            gap: 4rem;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -549,6 +567,29 @@
             font-size: 0.9rem;
         }
 
+    }
+
+    .footer {
+
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 90vw !important;
+            gap: 4rem;
+        }
+
+        &__header {
+            font-size: 1.4rem;
+        }
+
+        &__about, &__contact, &__links {
+            font-size: 0.95rem;
+        }
+
+        &__newsletter {
+            &--text {
+                font-size: 0.95rem;
+            }
+        }
     }
 }
 

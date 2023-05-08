@@ -103,10 +103,11 @@
 
         & a {
             color: $color-white;
-            transition: color .3s ease-in;
+            transition: color .3s ease-out;
 
             &:hover {
                 color: $color-yellow-dark;
+                transition: color .3s ease-in;
             }
         }
     }

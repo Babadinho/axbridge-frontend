@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
 import '@/styles/main.scss';
 import Navbar from '@/layouts/Navbar';
+import Footer from '@/layouts/Footer';
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
