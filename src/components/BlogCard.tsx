@@ -17,6 +17,7 @@ const BlogCard = ({
     <div className='blog__card'>
       <div className='blog__image'>
         <Image src={image} alt='team-image' fill />
+        <div className='blog__imageOverlay'></div>
       </div>
       <span className='blog__date'>{date}</span>
       <div className='blog__body'>

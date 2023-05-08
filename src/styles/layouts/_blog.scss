@@ -97,6 +97,13 @@
         }
     }
 
+    &__imageOverlay,  &__imageMiniOverlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(187, 143, 24, 0.322);
+    }
+
     &__date {
         @include display-flex(center);
         background-color: $color-yellow-darker;

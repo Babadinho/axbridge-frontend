@@ -17,6 +17,7 @@ const BlogCardMini = ({
     <div className='blog__cardMini'>
       <div className='blog__imageMini'>
         <Image src={image} alt='team-image' fill />
+        <div className='blog__imageMiniOverlay'></div>
         <span className='blog__dateMini'>{date}</span>
       </div>
 
