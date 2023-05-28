@@ -1,5 +1,4 @@
 import BlogCard from '@/components/BlogCard';
-import BlogCardMini from '@/components/BlogCardMini';
 import Link from 'next/link';
 import React from 'react';
 import { TbNews } from 'react-icons/tb';
@@ -40,6 +39,7 @@ const Blog = () => {
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel reiciendis accusamus nostrum hic distinctio dolores magnam laboriosam, deserunt nisi eum rerum dolorem quibusdam.'
             }
+            isMini={false}
           />
           <BlogCard
             id={1}
@@ -52,10 +52,11 @@ const Blog = () => {
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel reiciendis accusamus nostrum hic distinctio dolores magnam laboriosam, deserunt nisi eum rerum dolorem quibusdam.'
             }
+            isMini={false}
           />
         </div>
         <div className='blog__small'>
-          <BlogCardMini
+          <BlogCard
             id={1}
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
@@ -66,8 +67,9 @@ const Blog = () => {
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
+            isMini={true}
           />
-          <BlogCardMini
+          <BlogCard
             id={1}
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
@@ -78,8 +80,9 @@ const Blog = () => {
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
+            isMini={true}
           />
-          <BlogCardMini
+          <BlogCard
             id={1}
             date={'Mar 13, 2023'}
             image={'/images/Blog.jpg'}
@@ -90,6 +93,7 @@ const Blog = () => {
             description={
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
             }
+            isMini={true}
           />
         </div>
       </div>

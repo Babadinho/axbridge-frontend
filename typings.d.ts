@@ -47,6 +47,7 @@ export interface BlogItem {
   comments: number;
   title: string;
   description: string;
+  isMini: boolean;
 }
 
 interface TestimonialItem {
