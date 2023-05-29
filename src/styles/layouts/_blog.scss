@@ -97,12 +97,12 @@
         }
     }
 
-    &__imageOverlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(187, 143, 24, 0.219);
-    }
+    // &__imageOverlay {
+    //     position: absolute;
+    //     height: 100%;
+    //     width: 100%;
+    //     background-color: rgba(187, 143, 24, 0.219);
+    // }
 
     &__date {
         @include display-flex(center);

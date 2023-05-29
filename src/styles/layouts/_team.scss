@@ -128,14 +128,14 @@
     &__info {
         @include display-flex(center);
         flex-direction: column;
-        padding-top: 2rem;
+        padding-top: 1.6rem;
     }
 
     &__name {
         font-size: 1.3rem;
         font-weight: 500;
         text-transform: capitalize;
-        color: $color-yellow-darker;
+        color: $color-title;
     }
 
     &__role {

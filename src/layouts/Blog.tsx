@@ -31,7 +31,7 @@ const Blog = () => {
           <BlogCard
             id={1}
             date={'Mar 13, 2023'}
-            image='/images/Blog.jpg'
+            image='/images/business-law.jpg'
             category='Crime'
             author={'Franklyn Ohai'}
             comments={5}
@@ -44,7 +44,7 @@ const Blog = () => {
           <BlogCard
             id={1}
             date={'Mar 13, 2023'}
-            image={'/images/Blog.jpg'}
+            image={'/images/family-law.jpg'}
             category='Crime'
             author={'Franklyn Ohai'}
             comments={5}
@@ -59,7 +59,7 @@ const Blog = () => {
           <BlogCard
             id={1}
             date={'Mar 13, 2023'}
-            image={'/images/Blog.jpg'}
+            image={'/images/criminal-law.jpg'}
             category='Crime'
             author={'Franklyn Ohai'}
             comments={5}
@@ -85,7 +85,7 @@ const Blog = () => {
           <BlogCard
             id={1}
             date={'Mar 13, 2023'}
-            image={'/images/Blog.jpg'}
+            image={'/images/business-law.jpg'}
             category='Crime'
             author={'Franklyn Ohai'}
             comments={5}
