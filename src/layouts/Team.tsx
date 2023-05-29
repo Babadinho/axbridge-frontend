@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { IoIosPeople } from 'react-icons/io';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -10,22 +10,7 @@ import { teamData } from '../data/teamData';
 import TeamCard from '@/components/TeamCard';
 
 const Team = () => {
-  const [activeTeam, setActiveTeam] = useState<number>();
   const swiperRef = useRef<SwiperRef>(null);
-
-  const handleClickOutside = (e: MouseEvent) => {
-    if (
-      swiperRef.current &&
-      !swiperRef.current.swiper.el.contains(e.target as Node)
-    ) {
-      setActiveTeam(99);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   return (
     <section className='team'>
@@ -69,17 +54,7 @@ const Team = () => {
           ref={swiperRef}
         >
           {teamData.map((team) => (
-            <SwiperSlide
-              className={`team__card ${
-                activeTeam === team.id && 'team__card--active'
-              }`}
-              key={team.id}
-              onClick={() =>
-                activeTeam === team.id
-                  ? setActiveTeam(99)
-                  : setActiveTeam(team.id)
-              }
-            >
+            <SwiperSlide className='team__card' key={team.id}>
               <TeamCard {...team} />
             </SwiperSlide>
           ))}

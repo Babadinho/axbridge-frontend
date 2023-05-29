@@ -19,7 +19,6 @@ export interface SliderProps {
 
 export interface PracticeItem {
   id: number;
-  image: string;
   icon: ReactElement;
   title: string;
   description: string;

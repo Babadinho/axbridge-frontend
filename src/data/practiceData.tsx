@@ -5,7 +5,6 @@ import { VscLaw } from 'react-icons/vsc';
 export const practiceData: PracticeItem[] = [
   {
     id: 1,
-    image: '/images/family-law.jpg',
     icon: <MdFamilyRestroom />,
     title: 'Family Law',
     description:
@@ -14,7 +13,6 @@ export const practiceData: PracticeItem[] = [
   },
   {
     id: 2,
-    image: '/images/criminal-law.jpg',
     icon: <VscLaw />,
     title: 'Criminal Law',
     description:
@@ -23,7 +21,6 @@ export const practiceData: PracticeItem[] = [
   },
   {
     id: 3,
-    image: '/images/business-law.jpg',
     icon: <MdBusinessCenter />,
     title: 'Business Law',
     description:

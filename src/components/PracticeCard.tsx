@@ -1,19 +1,12 @@
 import React from 'react';
-import Image from 'next/image';
 import { PracticeItem } from '../../typings';
 
 const PracticeCard = (practice: PracticeItem) => {
-  const { image, icon, title, description, link } = practice;
+  const { icon, title, description, link } = practice;
   return (
     <>
       <div className='practice__card'>
-        <Image
-          src={image}
-          alt='practice-image'
-          className='practice__image'
-          fill
-        />
-        <div className='practice__cardOverlay'>
+        <div className='practice__cardBody'>
           <>
             <div className='practice__bodyHeader'>
               <span className='practice__bodyIcon'>{icon}</span>
