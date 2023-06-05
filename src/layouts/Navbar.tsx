@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { MdLocationPin, MdOutlineSmartphone } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { FaTiktok } from 'react-icons/fa';
+import { FaRegUser, FaTiktok, FaUser } from 'react-icons/fa';
+import { BiLogIn, BiUser } from 'react-icons/bi';
 
 const Navbar = () => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
@@ -96,6 +97,11 @@ const Navbar = () => {
               <Link href='#'>awards</Link>
               <span>|</span>
               <Link href='#'>contact</Link>
+              <span>|</span>
+              <Link href='/login' className='navbar__login'>
+                <BiLogIn />
+                Login
+              </Link>
             </div>
             <div className='navbar__mainMobile'>
               <div
@@ -153,6 +159,11 @@ const Navbar = () => {
                 <Link href='#'>awards</Link>
                 <span className='navbar__dividerMobile'></span>
                 <Link href='#'>contact</Link>
+                <span className='navbar__dividerMobile'></span>
+                <Link href='/login' className='navbar__login'>
+                  <BiLogIn />
+                  Login
+                </Link>
               </div>
             </div>
           </div>

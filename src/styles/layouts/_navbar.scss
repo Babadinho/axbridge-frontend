@@ -375,4 +375,9 @@
         margin-left: 2rem;
         width: 165px;
     }
+
+    &__login {
+        @include display-flex(center);
+        gap: 0.2rem;
+    }
 }
