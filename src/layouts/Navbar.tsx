@@ -2,11 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MdLocationPin, MdOutlineSmartphone } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { FaRegUser, FaTiktok, FaUser } from 'react-icons/fa';
-import { BiLogIn, BiUser } from 'react-icons/bi';
+import { FaTiktok } from 'react-icons/fa';
+import { BiLogIn } from 'react-icons/bi';
 
 const Navbar = () => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
@@ -66,7 +67,7 @@ const Navbar = () => {
         <div className='navbar__main'>
           <div className='navbar__container'>
             <Link href={'/'} className='navbar__logo'>
-              <img src='/images/Logo.png' alt='logo' />
+              <Image src='/images/Logo.png' alt='logo' width={85} height={50} />
             </Link>
             <div className='navbar__menu'>
               <Link href='#'>about us</Link>

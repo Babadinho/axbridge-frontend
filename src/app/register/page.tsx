@@ -48,7 +48,7 @@ const Register = () => {
           />
           <Button onClick={() => {}} label='submit' large fullWidth />
           <div className='register__notice'>
-            <span>Already have an account?</span>{' '}
+            <span>Already have an account?</span>&nbsp;
             <Link href='login'>Login</Link>.
           </div>
         </div>

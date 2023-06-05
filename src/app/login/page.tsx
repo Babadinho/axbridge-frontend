@@ -27,7 +27,7 @@ const Login = () => {
           />
           <Button onClick={() => {}} label='submit' large fullWidth />
           <div className='login__notice'>
-            <span>Don't have an account?</span>{' '}
+            <span>Don&apos;t have an account?</span>&nbsp;
             <Link href='register'>Register</Link>.
           </div>
         </div>

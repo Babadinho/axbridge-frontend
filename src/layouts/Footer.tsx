@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { FaTiktok } from 'react-icons/fa';
 import { ImTwitter, ImFacebook, ImInstagram } from 'react-icons/im';
 import {
@@ -16,7 +17,7 @@ const Footer = () => {
       <div className='footer__content'>
         <div className='footer__about'>
           <Link href={'/'} className='footer__logo'>
-            <img src='/images/Logo.png' alt='logo' />
+            <Image src='/images/Logo.png' alt='logo' width={85} height={50} />
           </Link>
           <div className='footer__about--body'>
             Velit esse molestie consequat, vel illum dolore eu feugiat nulla
