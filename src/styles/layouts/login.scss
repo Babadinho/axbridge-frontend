@@ -1,0 +1,24 @@
+.login {
+    padding: 2rem;
+    margin: auto;
+    max-width: 650px;
+    margin-bottom: 6rem;
+
+    &__notice {
+        text-align: center;
+        padding-top: 1.5rem;
+        font-size: 1rem;
+
+        & a {
+            text-decoration: none;
+            font-weight: 500;
+            color: $color-yellow-darker;
+            transition: color .3s ease-out;
+
+            &:hover {
+                color: $color-yellow-darkest;
+                transition: color .3s ease-in;
+            }
+        }
+    }
+}

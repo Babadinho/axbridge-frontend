@@ -1,0 +1,29 @@
+.button {
+    height: 40px;
+    width: fit-content;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0 1.3rem 0 1.3rem;
+    color: $color-light;
+    background-color: $color-yellow-darker;
+    border: $color-yellow-darker;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    margin-top: 0.5rem;
+
+    &:hover {
+        background-color: $color-yellow-darkest;
+        transition: background-color 0.3s ease-in;
+    }
+
+    &__full {
+        width: 100%;
+    }
+
+    &__large {
+        height: 50px;
+        font-size: 0.96rem;
+    }
+}

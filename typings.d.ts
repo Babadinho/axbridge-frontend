@@ -49,7 +49,7 @@ export interface BlogItem {
   isMini: boolean;
 }
 
-interface TestimonialItem {
+export interface TestimonialItem {
   id: number;
   title: string;
   description: string;
@@ -57,3 +57,10 @@ interface TestimonialItem {
   company: string;
 }
 [];
+
+export interface PageHeaderItem {
+  image: string;
+  breadcrumb?: string;
+  heading: string;
+  description?: string;
+}

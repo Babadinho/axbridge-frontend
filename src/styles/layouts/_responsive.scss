@@ -598,6 +598,12 @@
             }
         }
     }
+
+    .register {
+        &__name {
+            flex-direction: column;
+        }
+    }
 }
 
 @media (max-width: 450px) {
