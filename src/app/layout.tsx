@@ -2,6 +2,7 @@
 import '@/styles/main.scss';
 import Navbar from '@/layouts/Navbar';
 import Footer from '@/layouts/Footer';
+import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({
   children,
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>

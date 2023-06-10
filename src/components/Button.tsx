@@ -1,5 +1,5 @@
 interface ButtonProps {
-  label: string;
+  label: string | JSX.Element;
   fullWidth?: boolean;
   large?: boolean;
   onClick: () => void;
