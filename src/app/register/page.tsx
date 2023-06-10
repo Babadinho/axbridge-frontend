@@ -62,7 +62,7 @@ const Register = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [first_name, last_name, email, password]);
+  }, [first_name, last_name, email, password, callbackUrl]);
 
   return (
     <>

@@ -42,7 +42,7 @@ const Login = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [email, password]);
+  }, [email, password, callbackUrl]);
 
   return (
     <>
