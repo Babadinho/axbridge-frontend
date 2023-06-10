@@ -1,9 +1,10 @@
 'use client';
 
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useCallback, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 import PageHeader from '@/components/PageHeader';
@@ -26,12 +27,9 @@ const Register = () => {
 
   const { first_name, last_name, email, password } = user;
 
-  const handleChange = useCallback(
-    (name: string) => (e: { target: { value: string } }) => {
-      setUser((user) => ({ ...user, [name]: e.target.value }));
-    },
-    []
-  );
+  const handleChange = (name: string) => (e: { target: { value: string } }) => {
+    setUser((user) => ({ ...user, [name]: e.target.value }));
+  };
 
   const handleSubmit = useCallback(async () => {
     if (!first_name || !last_name || !email || !password) {
@@ -50,6 +48,13 @@ const Register = () => {
       setIsLoading(false);
 
       toast.success('Account created!');
+
+      signIn('credentials', {
+        redirect: true,
+        email,
+        password,
+        callbackUrl,
+      });
     } catch (error) {
       if (error) {
         console.log(error);
