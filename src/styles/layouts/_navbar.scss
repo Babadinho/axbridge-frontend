@@ -380,4 +380,8 @@
         @include display-flex(center);
         gap: 0.2rem;
     }
+    &__account{
+        @include display-flex(center);
+        gap: 0.2rem;
+    }
 }

@@ -10,6 +10,7 @@ import { toast } from 'react-hot-toast';
 import { MdAlternateEmail, MdLockOutline } from 'react-icons/md';
 import { ClipLoader } from 'react-spinners';
 import { useSearchParams } from 'next/navigation';
+import PrivateRoute from '@/libs/PrivateRoute';
 
 const Login = () => {
   const searchParams = useSearchParams();
@@ -84,4 +85,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default PrivateRoute(Login);

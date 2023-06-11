@@ -6,10 +6,12 @@ import Image from 'next/image';
 import { MdLocationPin, MdOutlineSmartphone } from 'react-icons/md';
 import { ImFacebook, ImInstagram, ImTwitter } from 'react-icons/im';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { FaTiktok } from 'react-icons/fa';
+import { FaRegUserCircle, FaTiktok } from 'react-icons/fa';
 import { BiLogIn } from 'react-icons/bi';
+import useCurrentUser from '@/hooks/useCurrentUser';
 
 const Navbar = () => {
+  const { data: currentUser } = useCurrentUser();
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   const [activeSubMenu, setActiveSubmenu] = useState(false);
 
@@ -72,7 +74,7 @@ const Navbar = () => {
             <div className='navbar__menu'>
               <Link href='#'>about us</Link>
               <span>|</span>
-              <Link href='#'>articles</Link>
+              <Link href='#'>Blog</Link>
               <span>|</span>
               <span
                 className='navbar__menuItem'
@@ -99,10 +101,17 @@ const Navbar = () => {
               <span>|</span>
               <Link href='#'>contact</Link>
               <span>|</span>
-              <Link href='/login' className='navbar__login'>
-                <BiLogIn />
-                Login
-              </Link>
+              {currentUser ? (
+                <Link href='/account' className='navbar__account'>
+                  <FaRegUserCircle />
+                  Account
+                </Link>
+              ) : (
+                <Link href='/login' className='navbar__login'>
+                  <BiLogIn />
+                  Login
+                </Link>
+              )}
             </div>
             <div className='navbar__mainMobile'>
               <div
@@ -123,7 +132,7 @@ const Navbar = () => {
               >
                 <Link href='#'>about us</Link>
                 <span className='navbar__dividerMobile'></span>
-                <Link href='#'>Articles</Link>
+                <Link href='#'>Blog</Link>
                 <span className='navbar__dividerMobile'></span>
                 <span className='navbar__mobileMenuItem'>
                   <Link
@@ -161,10 +170,17 @@ const Navbar = () => {
                 <span className='navbar__dividerMobile'></span>
                 <Link href='#'>contact</Link>
                 <span className='navbar__dividerMobile'></span>
-                <Link href='/login' className='navbar__login'>
-                  <BiLogIn />
-                  Login
-                </Link>
+                {currentUser ? (
+                  <Link href='/account' className='navbar__account'>
+                    <FaRegUserCircle />
+                    Account
+                  </Link>
+                ) : (
+                  <Link href='/login' className='navbar__login'>
+                    <BiLogIn />
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>
